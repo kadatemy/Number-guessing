@@ -3,16 +3,17 @@ import random
 attempts_list = []
 def show_score():
     #Define score using if and else statements
-def start_game():
+  def start_game():
     random_number = int(random.randint(1, 10))
     print("Hello traveler! Welcome to the game of guesses!")
     player_name = input("What is your name? ")
     wanna_play = input("Hi, {}, would you like to play the guessing game? (Enter Yes/No) ".format(player_name))
-    // Where the show_score function USED to be
+    ## Where the show_score function USED to be
     attempts = 0
     show_score()
     while wanna_play.lower() == "yes":
         try:
+            guess = input("Enter a number between 1 and 20: ")
             #Guess is between 1 - 20
             if int(guess) == random_number:
                 print("Nice! You got it!")
@@ -32,5 +33,5 @@ def start_game():
             print("({})".format(err))
     else:
         print("That's cool, have a good one!")
-if __name__ == '__main__':
+  if __name__ == '__main__':
     start_game()
