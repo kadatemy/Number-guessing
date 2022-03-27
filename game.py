@@ -3,10 +3,10 @@ import random
 attempts_list = []
 def show_score():
     #Define score using if and else statements
-    if len(attempts_list) <= 0:
-        print("No high score at the moment, so take it!")
+    if len(attempts_list) == 0:
+        print("You have no score at the moment!")
     else:
-        print("The high score is {} attempts".format(min(attempts_list)))
+        print("Your score is {} attempts".format(min(attempts_list)))
 
 def start_game():
     random_number = int(random.randint(1, 20))
